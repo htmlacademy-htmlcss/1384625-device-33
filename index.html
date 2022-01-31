@@ -3,44 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
       <h1 class="visually-hidden">Интернет магазин Девайс</h1>
       <a class=page-header-logo >
-        <img class="logo" src="" alt="Логотип Сайта Девайс">
+        <img class="logo" src="images/header/logo-header.svg" width="145" height="36" alt="Логотип Сайта Девайс"> <!--Логотип-->
       </a>
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
         <label>
           <input class="search-form-field" type="search" placeholder="Текст поиска">
-          <span class="visually-hidden" >Поиск по сайту</span> <!--Ошибка №1 -убрал visually-hidden с самого label, но добавил его к тексту "поиск по сайту"-->
+          <span class="visually-hidden" >Поиск по сайту</span>
         </label>
         <button class="search-form-button" type="submit" >Найти</button>
       </form>
       <nav class="navigation">
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item" >
-            <a class="navigation-link" href="#">Войти</a> <!--Ошибка №2-->
+        <ul class="navigation-user">
+          <li class="navigation-user-item" >
+            <a class="navigation-user-link" href="#">Войти</a>
           </li>
-          <li class="navigation-item" >
-            <a class="navigation-link" href="#">Сравнить</a>
+          <li class="navigation-user-item" >
+            <a class="navigation-user-link" href="#">Сравнить</a>
           </li>
-          <li class="navigation-item" >
-            <a class="navigation-link" href="#">Корзина</a>
+          <li class="navigation-user-item" >
+            <a class="navigation-user-link" href="#">Корзина</a>
           </li>
         </ul>
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a> <!--Ошибка №3-->
+          <li class="navigation-list-item">
+            <a class="navigation-list-link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
+          <li class="navigation-list-item">
+            <a class="navigation-list-link" href="#">Доставка</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Гарантия</a>
+          <li class="navigation-list-item">
+            <a class="navigation-list-link" href="#">Гарантия</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
+          <li class="navigation-list-item">
+            <a class="navigation-list-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -48,7 +49,7 @@
     <main class="main-index">
       <section class="showcase">
         <h2 class="visually-hidden">Витрина с гаджетами</h2>
-        <img class="slider-image" alt="Гаджет из каталога">
+        <img class="slider-image" src="images/slider/drone.png" width="560" height="560" alt="Гаджет из каталога"> <!--Картинка из слайдера-->
         <button class="slider-button slider-prev" type="button">
           <span class="visually-hidden">Предыдущее фото</span>
         </button>
@@ -86,7 +87,7 @@
         <h2 class="visually-hidden">Категории гаджетов</h2>
         <ul class="categories-list">
           <li class="categories-item">
-            <a class="categories-link" href="#"> <!--не пойму где ошибка-->
+            <a class="categories-link" href="#">
               <span class="categories-title">Виртуальная реальность</span>
             </a>
           </li>
@@ -164,9 +165,9 @@
         <p>Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции,<br> спецпредложения и вот это вот всё.</p>
         <form class="submit-form"" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden">Адрес электронной почты
-            <input type="email" name="email-form" placeholder="Ваш e-mail"> <!--добавил недостающие кавычки-->
+            <input type="email" name="email-form" placeholder="Ваш e-mail">
           </label>
-          <button class="button submit-button" type="submit">Подписаться</button> <!--Ошибка №4-->
+          <button class="button submit-button" type="submit">Подписаться</button>
         </form>
         <p>Это бесплатно</p>
       </section>
@@ -174,7 +175,7 @@
     <footer class="page-footer">
       <section class="footer-address">
         <h2 class="visually-hidden">Адрес</h2>
-        <img class="footer-logo" src="" alt="Логотип Девайс">
+        <img class="footer-logo" src="images/footer/logo-footer.svg" width="144,9" height="36" alt="Логотип Девайс"> <!--Логотип в футере-->
         <address class="footer-address-street">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</address>
       </section>
       <section class="footer-navigation">
