@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+
     <header class="page-header">
       <h1 class="visually-hidden">Интернет магазин Девайс</h1>
       <a class=page-header-logo >
         <img class="logo" src="images/header/logo-header.svg" width="145" height="36" alt="Логотип Сайта Девайс"> <!--Логотип-->
       </a>
+
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
         <label>
           <input class="search-form-field" type="search" placeholder="Текст поиска">
@@ -18,6 +20,7 @@
         </label>
         <button class="search-form-button" type="submit" >Найти</button>
       </form>
+
       <nav class="navigation">
         <ul class="navigation-user">
           <li class="navigation-user-item" >
@@ -30,6 +33,7 @@
             <a class="navigation-user-link" href="#">Корзина</a>
           </li>
         </ul>
+
         <ul class="navigation-list">
           <li class="navigation-list-item">
             <a class="navigation-list-link" href="catalog.html">Каталог товаров</a>
@@ -46,8 +50,11 @@
         </ul>
       </nav>
     </header>
+
     <main class="main-index">
+
       <section class="showcase">
+
         <h2 class="visually-hidden">Витрина с гаджетами</h2>
         <img class="slider-image" src="images/slider/drone.png" width="560" height="560" alt="Гаджет из каталога"> <!--Картинка из слайдера-->
         <button class="slider-button slider-prev" type="button">
@@ -59,12 +66,14 @@
         <p>Порхает как бабочка, жалит как пчела!</p>
         <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
         <a class="button button-more-info" href="#">Подробнее</a>
+
         <dl class="specifications-list">
           <dt class="specifications-item">Дальность полета</dt>
-          <dd class="specifications-value"><b>800 м</b></dd>
+          <dd class="specifications-value">800 м</dd>
           <dt class="specifications-item">Радиус поражения</dt>
-          <dd class="specifications-value"><b>50 м</b></dd>
+          <dd class="specifications-value">50 м</dd>
         </dl>
+
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
@@ -83,75 +92,95 @@
           </li>
         </ol>
       </section>
+
       <section class="categories">
         <h2 class="visually-hidden">Категории гаджетов</h2>
+
         <ul class="categories-list">
           <li class="categories-item">
             <a class="categories-link" href="#">
+              <div class="categories-icons icon-vr">
+              </div>
               <span class="categories-title">Виртуальная реальность</span>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-            <span class="categories-title">Монопод для селфи</span>
+              <div class="categories-icons icon-monopod">
+              </div>
+              <span class="categories-title">Монопод для селфи</span>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-            <span class="categories-title">Экш-камеры</span>
+              <div class="categories-icons icon-action-camera">
+              </div>
+              <span class="categories-title">Экш-камеры</span>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-            <span class="categories-title">Фитнес-браслеты</span>
+              <div class="categories-icons icon-fitness-tracker">
+              </div>
+              <span class="categories-title">Фитнес-браслеты</span>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-            <span class="categories-title">Умные часы</span>
+              <div class="categories-icons icon-smart-watch">
+              </div>
+              <span class="categories-title">Умные часы</span>
             </a>
           </li>
           <li class="categories-item">
             <a class="categories-link" href="#">
-            <span class="categories-title">Квадрокоптеры</span>
+              <div class="categories-icons icon-drone ">
+              </div>
+              <span class="categories-title">Квадрокоптеры</span>
             </a>
           </li>
         </ul>
       </section>
+
       <section class="services">
         <h2 class="services-title visually-hidden">Услуги</h2>
         <ul class="services-list">
           <li class="services-item">
-            <a class="button services-link" href="#">Доставка</a>
-              <h2 class="services-name">Доставка</h2>
-              <p>Мы с удовольствием доставим ваш товар прямо<br>
+            <a class="button button-current " href="#">Доставка</a>
+            <h2 class="services-name">Доставка</h2>
+            <p>Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно! Ведь<br>
                 мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
           <li class="services-item">
-            <a class="button services-link" href="#">Гарантия</a>
+            <a class="button " href="#">Гарантия</a>
           <li class="services-item">
-            <a class="button services-link" href="#">Кредит</a>
+            <a class="button " href="#">Кредит</a>
           </li>
         </ul>
-        <a class=" button-services-additional" href="#">Доставим редкий товар под заказ</a>
+        <div class="additional-service">
+          <a class="button-additional-service" href="#">Доставим редкий товар под заказ</a>
+        </div>
+
       </section>
+
       <section class="information">
         <h2 class="information-title">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным<br> гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдалённые<br> уголки России транспортными компаниями:</p>
         <ul class="delivery-list">
-          <li class="delivery-item">Меловые линии</li>
-          <li class="delivery-item">СДИК</li>
-          <li class="delivery-item">ТоксБерри</li>
+          <li class="delivery-item"><span>Меловые линии</span></li>
+          <li class="delivery-item"><span>СДИК</span></li>
+          <li class="delivery-item"><span>ТоксБерри</span></li>
         </ul>
         <a class="button button-more-about" href="#">Подробнее о нас</a>
       </section>
+
       <section class="contacts">
         <h2 class="contacts-title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис.<br> Заодно сможете проверить работоспособность покупки.</p>
         <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
-        <address class="contacts-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</adress>
+        <address class="contacts-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
         <a class="contacts-phone" href="88128121212">+7 (812) 812-12-12</a>
         <h3 class="contacts-subtitle">Время работы</h3>
         <ul class="contacts-shedule">
@@ -160,6 +189,7 @@
         </ul>
         <a class="message-button button" href="#">Напишите нам</a>
       </section>
+
       <section class="submit">
         <h2 class="submit-title">Подпишитесь на рассылку</h2>
         <p>Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции,<br> спецпредложения и вот это вот всё.</p>
@@ -167,28 +197,31 @@
           <label class="visually-hidden">Адрес электронной почты
             <input type="email" name="email-form" placeholder="Ваш e-mail">
           </label>
-          <button class="button submit-button" type="submit">Подписаться</button>
+          <button class="submit-button" type="submit">Подписаться</button>
         </form>
         <p>Это бесплатно</p>
       </section>
+
     </main>
+
     <footer class="page-footer">
       <section class="footer-address">
         <h2 class="visually-hidden">Адрес</h2>
         <img class="footer-logo" src="images/footer/logo-footer.svg" width="144,9" height="36" alt="Логотип Девайс"> <!--Логотип в футере-->
         <address class="footer-address-street">Санкт-Петербург, набережная<br>реки Карповки, 5, литера П.</address>
       </section>
+
       <section class="footer-navigation">
         <h2 class="visually-hidden">Ссылки навигации</h2>
         <ul class="footer-navigation-list navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
+            <a class="navigation-list-link" href="#">Доставка</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Гарантия</a>
+            <a class="navigation-list-link" href="#">Гарантия</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
+            <a class="navigation-list-link" href="#">Контакты</a>
           </li>
         </ul>
       </section>
@@ -212,9 +245,10 @@
         </li>
       </ul>
     </section>
+
     <section class="footer-contacts">
-      <address class="footer-contacts-phone">
-        <a href="tel:+78005558628">Тел.: +7 (812) 812-12-12</a>
+      <address>
+        <a class="footer-contacts-phone" href="tel:+78005558628">Тел.: +7 (812) 812-12-12</a>
       </address>
       <p class="about-text">
         <span class="visually-hidden">Сделано в</span>
