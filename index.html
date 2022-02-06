@@ -11,44 +11,47 @@
       <div class="page-header-container">
         <h1 class="visually-hidden">Интернет магазин Девайс</h1>
         <img class="logo" src="images/header/logo-header.svg" width="145" height="36" alt="Логотип Сайта Девайс"> <!--Логотип-->
-
-        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label>
-           <input class="search-form-field" type="search" placeholder="Текст поиска">
-            <span class="visually-hidden" >Поиск по сайту</span>
-          </label>
-         <button class="search-form-button" type="submit" >Найти</button>
-       </form>
-
-        <nav class="navigation">
+        <div class="page-header-row">
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label>
+            <input class="search-form-field" type="search" placeholder="Текст поиска">
+              <span class="visually-hidden" >Поиск по сайту</span>
+            </label>
+          <button class="search-form-button" type="submit" >Найти</button>
+          </form>
           <ul class="navigation-user marker-none">
             <li class="navigation-user-item" >
-             <a class="navigation-user-link" href="#">Войти</a>
-           </li>
+            <a class="navigation-user-link" href="#">Войти</a>
+          </li>
             <li class="navigation-user-item" >
-             <a class="navigation-user-link" href="#">Сравнить</a>
-           </li>
-           <li class="navigation-user-item" >
-             <a class="navigation-user-link" href="#">Корзина</a>
-           </li>
+            <a class="navigation-user-link" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-user-item" >
+            <a class="navigation-user-link" href="#">Корзина</a>
+          </li>
           </ul>
-         <ul class="navigation-list marker-none">
-            <li class="navigation-list-item">
-             <a class="navigation-list-link" href="catalog.html">Каталог товаров</a>
-           </li>
-            <li class="navigation-list-item">
-            <a class="navigation-list-link" href="#">Доставка</a>
-            </li>
-            <li class="navigation-list-item">
-              <a class="navigation-list-link" href="#">Гарантия</a>
-            </li>
-            <li class="navigation-list-item">
-              <a class="navigation-list-link" href="#">Контакты</a>
-            </li>
-          </ul>
-       </nav>
+        </div>
+        <div class="page-header-row">
+          <nav class="navigation">
+            <ul class="navigation-list marker-none">
+              <li class="navigation-list-item">
+                <a class="navigation-list-link" href="#">Каталог товаров</a>
+              </li>
+            </ul>
+            <ul class="navigation-page-link marker-none">
+              <li class="navigation-list-item">
+                <a class="navigation-list-link" href="#">Доставка</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-list-link" href="#">Гарантия</a>
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-list-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
     </div>
-
     </header>
 
     <main class="main-index main-container">
@@ -57,7 +60,7 @@
       <div class="showcase-image">
         <img class="slider-image" src="images/slider/drone.png" width="560" height="560" alt="Гаджет из каталога"> <!--Картинка из слайдера-->
       </div>
-      <div>
+      <div class="showcase-card">
         <button class="slider-button slider-prev" type="button">
         <span class="visually-hidden">Предыдущее фото</span>
         </button>
@@ -67,15 +70,14 @@
         <p class="showcase-title">Порхает как бабочка, жалит как пчела!</p>
         <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
         <a class="button button-more-info" href="#">Подробнее</a>
-      </div>
-
         <dl class="specifications-list">
-          <dt class="specifications-item">Дальность полета</dt>
-          <dd class="specifications-value">800 м</dd>
+          <div>
+            <dt class="specifications-item">Дальность полета</dt>
+            <dd class="specifications-value">800 м</dd>
+          </div>
           <dt class="specifications-item">Радиус поражения</dt>
           <dd class="specifications-value">50 м</dd>
         </dl>
-
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
@@ -93,6 +95,8 @@
             </button>
           </li>
         </ol>
+      </div>
+
       </section>
       <section class="categories">
         <h2 class="visually-hidden">Категории гаджетов</h2>
@@ -170,9 +174,9 @@
         <p>Огромный выбор гаджетов не оставит равнодушным<br> гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдалённые<br> уголки России транспортными компаниями:</p>
         <ul class="delivery-list">
-          <li class="delivery-item"><span>Меловые линии</span></li>
-          <li class="delivery-item"><span>СДИК</span></li>
-          <li class="delivery-item"><span>ТоксБерри</span></li>
+          <li class="delivery-item">Меловые линии</li>
+          <li class="delivery-item">СДИК</li>
+          <li class="delivery-item">ТоксБерри</li>
         </ul>
         <a class="button button-more-about" href="#">Подробнее о нас</a>
       </section>

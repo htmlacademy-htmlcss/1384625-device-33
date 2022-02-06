@@ -52,20 +52,29 @@ body {
 .page-header-container{
   color: #000000;
   background: #ffE17f;
-  display:flex;
   width: 1160px;
   margin: 0 auto;
 }
 .logo {
-  margin: 0;
-  margin-right:auto;
+margin-top:17px;
  }
 
-/*обнуление отступов в списках в nav */
+ .page-header-row {
+  display:flex;
+}
+
+ /*обнуление отступов в списках в nav */
 .navigation-user,
-.navigation-list {
+.navigation-list,
+.navigation-page-link {
   margin:0;
   padding:0;
+}
+.navigation-page-link{
+  display:flex;
+  padding:0;
+  margin:0;
+
 }
 /*стили для ссылок Меню пользователя*/
 .navigation-user-link {
@@ -96,13 +105,10 @@ body {
   font-weight: 800;
   color: #000000;
 }
-.page-container {
-  width: 1160px;
-  margin: 0 auto;
-}
 .showcase {
   display: flex;
   width:1160px;
+  margin: 0 auto;
 }
 .button {
   font-family: "Raleway", sans-serif ;
@@ -133,9 +139,11 @@ body {
 .marker-none {
   list-style-type: none
 }
-.categories {
+.categories-list {
   display:flex;
-  flex-direction: row;
+}
+.specifications-list {
+  display: flex;
 }
 
 .categories-link {
@@ -213,13 +221,26 @@ body {
   color: #000000;
   }
 /*список транспортных компаний*/
-.delivery-item {
-  color:#ffE17f
+.delivery-list{
+  list-style: none;
+  padding:0;
+  margin:0;
 }
-.delivery-item span {
+.delivery-item {
   font-weight: 700;
   line-height: 20px;
   color:#000000;
+  margin-bottom: 19px;
+}
+.delivery-item::before {
+  content:"";
+  display:inline-block;
+  width:8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color:#FFC700;
+  vertical-align: middle;
+  margin-right: 26px;
 }
 .contacts-subtitle {
   font-family: "Rubik", sans-serif ;
