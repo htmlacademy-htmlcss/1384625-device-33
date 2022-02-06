@@ -19,7 +19,7 @@
         <button class="search-form-button" type="submit" >Найти</button>
       </form>
       <nav class="navigation">
-        <ul class="navigation-user">
+        <ul class="navigation-user ">
           <li class="navigation-user-item" >
             <a class="navigation-user-link" href="#">Коля Петухов</a> <!--Теперь вместо "войти" на макете авторизован Коля Петухов-->
           </li>
@@ -33,7 +33,7 @@
             <a class="navigation-user-link" href="#">Корзина</a>
           </li>
         </ul>
-        <ul class="navigation-list">
+        <ul class="navigation-list ">
           <li class="navigation-list-item">
             <a class="navigation-list-link" href="#">Каталог товаров</a>
           </li>
@@ -52,7 +52,7 @@
     <main class="main-inner">
       <header class="inner-header">
         <h2 class="inner-header-title">Моноподы для селфи</h2>
-        <ul class="breadcrumbs">
+        <ul class="breadcrumbs marker-none">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
@@ -73,7 +73,7 @@
           </fieldset>
           <fieldset class="filter-form-group">
             <legend class="filter-form-title">Цвет</legend>
-            <ul class="filter-list">
+            <ul class="filter-list marker-none">
               <li class="filter-list-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="black" checked>
@@ -127,9 +127,9 @@
         </form>
         <h3 class="select-title">Сортировка:</h3> <!--Сомнения на счета h3 здесь-->
         <select class="select-control">
-          <option value="popular"><span>Популярные</span></option>
-          <option value="popular"><span>Самые дорогие</span></option> <!--Этих опций не было на макете-->
-          <option value="popular"><span>Самые дешевые</span></option>
+          <option value="popular">Популярные</option>
+          <option value="more-expensive">Самые дорогие</option> <!--Этих опций не было на макете-->
+          <option value="cheaper">Самые дешевые</option>
         </select>
         <a href="#" class="button-up">
           <span class="visually-hidden">от меньшего к большему</span>
@@ -172,7 +172,7 @@
         </li>
       </ul>
       <a class="pagination-more" href="#">Загрузить ещё</a>
-      <ul class="pagination">
+      <ul class="pagination marker-none">
         <li class="pagination-item">
           <a class="pagination-link pagination-back" href="#">Назад</a>
           <a class="pagination-link" href="#">1</a>

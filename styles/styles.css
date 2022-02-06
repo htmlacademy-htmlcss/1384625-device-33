@@ -30,8 +30,15 @@
   font-display: swap;
 
 }
+html {
+  height:100%;
+}
 
 body {
+  margin:0;
+  display:flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif ;
   font-weight: 400;
   font-size: 18px;
@@ -39,9 +46,26 @@ body {
   color: #000000;
   background: #ffffff ;
 }
-.page-header {
+.main-container {
+  flex-grow:1;
+}
+.page-header-container{
   color: #000000;
   background: #ffE17f;
+  display:flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+.logo {
+  margin: 0;
+  margin-right:auto;
+ }
+
+/*обнуление отступов в списках в nav */
+.navigation-user,
+.navigation-list {
+  margin:0;
+  padding:0;
 }
 /*стили для ссылок Меню пользователя*/
 .navigation-user-link {
@@ -50,8 +74,7 @@ body {
   color: #000000;
   text-align: center;
   text-decoration: none;
-  }
-
+}
  /*стили для ссылок Навигации по сайту*/
 .navigation-list-link {
   font-family: "Raleway", sans-serif ;
@@ -66,14 +89,21 @@ body {
   background-color: #ffffff;
 }
 
-.showcase p:nth-last-of-type(2) { /*кажется, что можно было проще селектор использовать...*/
+.showcase-title{
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
   color: #000000;
 }
-
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+.showcase {
+  display: flex;
+  width:1160px;
+}
 .button {
   font-family: "Raleway", sans-serif ;
   font-size: 18px;
@@ -99,17 +129,15 @@ body {
   font-size: 36px;
   font-weight: 400;
 }
-/*убирает маркеры у списков*/
-.categories-list, /*селекторы через запятую, вероятно, так лучше не делать, надо уточнить*/
-.navigation-user,
-.navigation-list,
-.contacts-shedule,
-.footer-social-list,
-.breadcrumbs,
-.filter-list,
-.pagination {
+
+.marker-none {
   list-style-type: none
 }
+.categories {
+  display:flex;
+  flex-direction: row;
+}
+
 .categories-link {
   font-family: "Raleway", sans-serif ;
   line-height: 24px;
@@ -123,12 +151,12 @@ body {
   width: 160px;
   height: 160px;
   background-color: #ffE17f;
-}
-.icon-vr {
-  background-image: url("../images/catalog/vr.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+.icon-vr {
+  background-image: url("../images/catalog/vr.svg");
+  }
 .icon-monopod {
   background-image: url("../images/catalog/monopod.svg");
   background-repeat: no-repeat;
@@ -136,24 +164,16 @@ body {
 }
 .icon-action-camera {
   background-image: url("../images/catalog/action-camera.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
+  }
 .icon-fitness-tracker {
   background-image: url("../images/catalog/fitness-tracker.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 .icon-smart-watch {
   background-image: url("../images/catalog/smart-watch.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
+ }
 .icon-drone {
   background-image: url("../images/catalog/drone.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
+  }
 /* Услуги */
 .services-name {
   font-family: "Raleway", sans-serif ;
@@ -168,7 +188,7 @@ body {
   background-position: 50% 50%;
 }
 
-/* что то не так сделал, надо разобраться */
+/* не смог сжедать как на макете */
 .additional-service{
   width: 1160px;
   height: 100px;
@@ -186,15 +206,13 @@ body {
   text-decoration: none;
 }
 
-.information-title, /*селекторы через запятую, вероятно, так лучше не делать, надо уточнить*/
-.contacts-title,
-.submit-title {
+.section-title{
   font-family:"Raleway", sans-serif ;
   font-size: 50px;
   line-height:50px;
   color: #000000;
   }
-
+/*список транспортных компаний*/
 .delivery-item {
   color:#ffE17f
 }
