@@ -33,7 +33,6 @@
 html {
   height:100%;
 }
-
 body {
   margin:0;
   display:flex;
@@ -46,37 +45,39 @@ body {
   color: #000000;
   background: #ffffff ;
 }
-.main-container {
-  flex-grow:1;
+
+.logo-header { /* ! логитип странно себя ведет при изменении масштаба страницы*/
+  margin-top:17px;
+  margin-left:200px;
+  margin-right:1095px;
+  margin-bottom:30px;
+  display:block;
 }
+
+/*обертка Header*/
 .page-header-container{
-  color: #000000;
   background: #ffE17f;
   width: 1160px;
-  margin: 0 auto;
+  height: 300px;
+  margin:0 auto;
+  padding-top:43px;
 }
-.logo {
-margin-top:17px;
- }
-
- .page-header-row {
+.page-header-row {
   display:flex;
+  justify-content: space-between; /*! как правильно спозиционрировать элементы*/
+  align-items: baseline;
+  width: 1040px;
+  margin:0 auto;
+  margin-bottom: 30px;
 }
-
- /*обнуление отступов в списках в nav */
-.navigation-user,
-.navigation-list,
-.navigation-page-link {
+.navigation-user {
+  display:flex;
+  justify-content: space-between;
+  width: 240px;
+  list-style: none;
   margin:0;
   padding:0;
 }
-.navigation-page-link{
-  display:flex;
-  padding:0;
-  margin:0;
-
-}
-/*стили для ссылок Меню пользователя*/
 .navigation-user-link {
   line-height: 30px;
   font-weight: 400;
@@ -84,7 +85,33 @@ margin-top:17px;
   text-align: center;
   text-decoration: none;
 }
- /*стили для ссылок Навигации по сайту*/
+.search-form-field { /*! как задать цвет "текст поиска" и убрать пробел между вводом и кнопкой*/
+  width: 359px;
+  height: 40px;
+  background-color: #ffE17f;
+  border: 2px solid #000000;
+}
+.search-form-button {
+  width: 160px;
+  height: 40px;
+  background-color: #ffE17f;
+  border: 2px solid #000000;
+}
+
+.navigation-list {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.navigation-page-link {
+  width: 471px;
+  height: 21px;
+  display: flex;
+  justify-content: space-between;
+  margin:0;
+  padding:0;
+  list-style: none;
+}
 .navigation-list-link {
   font-family: "Raleway", sans-serif ;
   line-height: 21px;
@@ -94,6 +121,12 @@ margin-top:17px;
   text-decoration: none;
   text-transform: uppercase;
 }
+
+
+.main-container {
+  flex-grow:1;
+}
+
 .main-index {
   background-color: #ffffff;
 }
@@ -136,9 +169,6 @@ margin-top:17px;
   font-weight: 400;
 }
 
-.marker-none {
-  list-style-type: none
-}
 .categories-list {
   display:flex;
 }
@@ -154,7 +184,6 @@ margin-top:17px;
   text-decoration: none;
 }
 
-/*Категории гаджетов*/
 .categories-icons {
   width: 160px;
   height: 160px;
@@ -182,7 +211,7 @@ margin-top:17px;
 .icon-drone {
   background-image: url("../images/catalog/drone.svg");
   }
-/* Услуги */
+
 .services-name {
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
@@ -196,7 +225,7 @@ margin-top:17px;
   background-position: 50% 50%;
 }
 
-/* не смог сжедать как на макете */
+
 .additional-service{
   width: 1160px;
   height: 100px;
@@ -220,7 +249,7 @@ margin-top:17px;
   line-height:50px;
   color: #000000;
   }
-/*список транспортных компаний*/
+
 .delivery-list{
   list-style: none;
   padding:0;
@@ -283,10 +312,7 @@ margin-top:17px;
 .htmlacademy-link {
   color: #ffE17f;
 }
-/*для каталога*/
-.navigation-user-link .entered {
-/*хотел поменять цвет "Выйти" но в макете показывает что он черный , хотя виден как серый, не понял*/
-}
+
 .inner-header-title {
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
@@ -350,4 +376,17 @@ margin-top:17px;
 }
 .pagination {
   background-color: #EBEBEB;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
