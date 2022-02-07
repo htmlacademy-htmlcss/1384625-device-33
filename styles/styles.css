@@ -46,12 +46,10 @@ body {
   background: #ffffff ;
 }
 
-.logo-header { /* ! логитип странно себя ведет при изменении масштаба страницы*/
-  margin-top:17px;
-  margin-left:200px;
-  margin-right:1095px;
-  margin-bottom:30px;
+.logo-header { /* ! не понимаю как логотип разместить как макете*/
   display:block;
+  margin-bottom: 30px;
+  margin-left: 60px;
 }
 
 /*обертка Header*/
@@ -61,11 +59,12 @@ body {
   height: 300px;
   margin:0 auto;
   padding-top:43px;
+  margin-top:40px;
 }
+
 .page-header-row {
   display:flex;
-  justify-content: space-between; /*! как правильно спозиционрировать элементы*/
-  align-items: baseline;
+  justify-content: space-between;
   width: 1040px;
   margin:0 auto;
   margin-bottom: 30px;
@@ -122,15 +121,14 @@ body {
   text-transform: uppercase;
 }
 
-
+/*main*/
 .main-container {
   flex-grow:1;
 }
-
 .main-index {
   background-color: #ffffff;
 }
-
+/*section showcase*/
 .showcase-title{
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
@@ -143,6 +141,17 @@ body {
   width:1160px;
   margin: 0 auto;
 }
+.showcase-navigation {
+  display:flex;
+  justify-content: space-between;
+}
+.slider-pagination {
+  display: flex;
+}
+.button button-more-info{ /*не пойму почему на элемент не влияет ширина и высота*/
+  width:220px;
+  height:40px;
+}
 .button {
   font-family: "Raleway", sans-serif ;
   font-size: 18px;
@@ -154,6 +163,23 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+/*section categories*/
+.categories {
+  display: flex;
+  margin: 0 auto;
+  width: 1160px;
+
+ }
+
+ .categories-list {
+  display:flex;
+  justify-content: space-between;
+
+
+}
+
+
 .button-current {
   font-family: "Raleway", sans-serif ;
   color: #ffE17f;
@@ -169,9 +195,7 @@ body {
   font-weight: 400;
 }
 
-.categories-list {
-  display:flex;
-}
+
 .specifications-list {
   display: flex;
 }

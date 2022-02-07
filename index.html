@@ -7,10 +7,11 @@
   </head>
   <body>
     <header class="page-header">
-      <h1 class="visually-hidden">Интернет магазин Девайс</h1>
-      <img class="logo-header" src="images/header/logo-header.svg" width="145" height="36" alt="Логотип Сайта Девайс">
 
       <div class="page-header-container">
+
+        <h1 class="visually-hidden">Интернет магазин Девайс</h1>
+        <img class="logo-header" src="images/header/logo-header.svg" width="145" height="36" alt="Логотип Сайта Девайс">
 
         <div class="page-header-row">
 
@@ -61,59 +62,69 @@
 
         </nav>
 
-
-
       </div>
     </header>
 
     <main class="main-index main-container">
+
       <section class="showcase">
+
         <h2 class="visually-hidden">Витрина с гаджетами</h2>
-      <div class="showcase-image">
-        <img class="slider-image" src="images/slider/drone.png" width="560" height="560" alt="Гаджет из каталога">
-      </div>
-      <div class="showcase-card">
-        <button class="slider-button slider-prev" type="button">
-        <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
-        <p class="showcase-title">Порхает как бабочка, жалит как пчела!</p>
-        <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-        <a class="button button-more-info" href="#">Подробнее</a>
-        <dl class="specifications-list">
-          <div>
+
+        <div class="showcase-image">
+          <img class="slider-image" src="images/slider/drone.png" width="560" height="560" alt="Гаджет из каталога">
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+        </div>
+
+        <div class="showcase-card">
+
+          <p class="showcase-title">Порхает как бабочка, жалит как пчела!</p>
+          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
+          <div class="showcase-navigation">
+            <a class="button button-more-info" href="#">Подробнее</a>
+            <ol class="slider-pagination">
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Первый гаджет</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Второй гаджет</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">Третий гаджет</span>
+                </button>
+              </li>
+            </ol>
+          </div>
+
+          <dl class="specifications-list"> <!--не знаю как поменять местами определение и описание без нарушения семантики-->
+            <div>
             <dt class="specifications-item">Дальность полета</dt>
             <dd class="specifications-value">800 м</dd>
-          </div>
-          <dt class="specifications-item">Радиус поражения</dt>
-          <dd class="specifications-value">50 м</dd>
-        </dl>
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Первый гаджет</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Второй гаджет</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">Третий гаджет</span>
-            </button>
-          </li>
-        </ol>
-      </div>
+            </div>
+            <div>
+            <dt class="specifications-item">Радиус поражения</dt>
+            <dd class="specifications-value">50 м</dd>
+            </div>
+          </dl>
+
+        </div>
 
       </section>
-      <section class="categories">
-        <h2 class="visually-hidden">Категории гаджетов</h2>
 
-        <ul class="categories-list marker-none">
+      <section class="categories">
+        <h2 class="visually-hidden">Категории гаджетов</h2> <!--чтобы разделить карточки с категориями можно каждый li обернуть в div?-->
+
+        <ul class="categories-list">
           <li class="categories-item">
             <a class="categories-link" href="#">
               <div class="categories-icons icon-vr">
