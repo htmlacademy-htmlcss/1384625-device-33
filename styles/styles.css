@@ -140,6 +140,7 @@ body {
   display: flex;
   width:1160px;
   margin: 0 auto;
+  margin-bottom: 70px;
 }
 .showcase-navigation {
   display:flex;
@@ -163,29 +164,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-
-/*section categories*/
-.categories {
-  display: flex;
-  margin: 0 auto;
-  width: 1160px;
-
- }
-
- .categories-list {
-  display:flex;
-  justify-content: space-between;
-
-
-}
-
-
-.button-current {
-  font-family: "Raleway", sans-serif ;
-  color: #ffE17f;
-  background-color:#000000;
-}
-
 .specifications-item {
   font-size: 16px;
   font-weight: 400;
@@ -194,12 +172,25 @@ body {
   font-size: 36px;
   font-weight: 400;
 }
-
-
 .specifications-list {
   display: flex;
 }
 
+/*section categories*/
+
+.categories {
+  width:1440px;
+  margin: 0 auto;
+}
+
+.categories-list { /*Не пойму как внутри карточки от иконки сделать отступ до span*/
+ display:flex;
+ justify-content: space-between;
+ width: 1160px;
+ margin: 0 auto;
+ padding:0;
+ list-style: none;
+}
 .categories-link {
   font-family: "Raleway", sans-serif ;
   line-height: 24px;
@@ -236,23 +227,43 @@ body {
   background-image: url("../images/catalog/drone.svg");
   }
 
+
+/*services*/
+.services {
+  width:1440px;
+  margin: 0 auto;
+  background-color: #f0f0f0 ;
+  background-image: url("../images/delivery-services.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.services-menu {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.services-list {
+  list-style: none;
+  padding: 0;
+
+}
+.button-current {
+  font-family: "Raleway", sans-serif ;
+  color: #ffE17f;
+  background-color:#000000;
+}
 .services-name {
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
 }
-.services {
-  background-color: #f0f0f0 ;
-  background-image: url("../images/delivery-services.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
 
 .additional-service{
   width: 1160px;
   height: 100px;
+  margin: 0 auto;
   background-color: #f0f0f0;
   background-image: url("../images/delivery-car-services.svg");
   background-repeat: no-repeat;
@@ -274,6 +285,15 @@ body {
   color: #000000;
   }
 
+
+  /*section .information*/
+
+.information {
+  display: flex;
+  width: 1440px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
 .delivery-list{
   list-style: none;
   padding:0;
@@ -309,9 +329,25 @@ body {
 .contacts-phone {
   color:#000000;
 }
+
+/*section .submit*/
+
 .submit {
+  width: 1440px;
+  margin: 0 auto;
   background-color: #f0f0f0;
 }
+.submit-info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.submit-form-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .submit-button {
   font-family: "Raleway", sans-serif ;
   line-height: 21px;
@@ -319,10 +355,32 @@ body {
   color: #000000;
   text-transform: uppercase;
 }
+
+
+/*footer*/
+
 .page-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  margin:0 auto;
   background-color: #444444;
   color: #ffffff;
 }
+.navigation-list{
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  list-style: none;
+
+}
+.footer-social-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
 .footer-address-street {
   font-style: normal;
 }
