@@ -30,8 +30,14 @@
   font-display: swap;
 
 }
-
+html {
+  height:100%;
+}
 body {
+  margin:0;
+  display:flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif ;
   font-weight: 400;
   font-size: 18px;
@@ -39,20 +45,72 @@ body {
   color: #000000;
   background: #ffffff ;
 }
-.page-header {
-  color: #000000;
-  background: #ffE17f;
+
+.logo-header { /* ! не понимаю как логотип разместить как макете*/
+  display:block;
+  margin-bottom: 30px;
+  margin-left: 60px;
 }
-/*стили для ссылок Меню пользователя*/
+
+/*обертка Header*/
+.page-header-container{
+  background: #ffE17f;
+  width: 1160px;
+  height: 300px;
+  margin:0 auto;
+  padding-top:43px;
+  margin-top:40px;
+}
+
+.page-header-row {
+  display:flex;
+  justify-content: space-between;
+  width: 1040px;
+  margin:0 auto;
+  margin-bottom: 30px;
+}
+.navigation-user {
+  display:flex;
+  justify-content: space-between;
+  width: 240px;
+  list-style: none;
+  margin:0;
+  padding:0;
+}
 .navigation-user-link {
   line-height: 30px;
   font-weight: 400;
   color: #000000;
   text-align: center;
   text-decoration: none;
-  }
+}
+.search-form-field { /*! как задать цвет "текст поиска" и убрать пробел между вводом и кнопкой*/
+  width: 359px;
+  height: 40px;
+  background-color: #ffE17f;
+  border: 2px solid #000000;
+}
+.search-form-button {
+  width: 160px;
+  height: 40px;
+  background-color: #ffE17f;
+  border: 2px solid #000000;
+}
 
- /*стили для ссылок Навигации по сайту*/
+.navigation-list {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.navigation-page-link {
+  width: 471px;
+  height: 21px;
+  display: flex;
+  justify-content: space-between;
+  margin:0;
+  padding:0;
+  list-style: none;
+}
 .navigation-list-link {
   font-family: "Raleway", sans-serif ;
   line-height: 21px;
@@ -62,18 +120,39 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+/*main*/
+.main-container {
+  flex-grow:1;
+}
 .main-index {
   background-color: #ffffff;
 }
-
-.showcase p:nth-last-of-type(2) { /*кажется, что можно было проще селектор использовать...*/
+/*section showcase*/
+.showcase-title{
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
   color: #000000;
 }
-
+.showcase {
+  display: flex;
+  width:1160px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+.showcase-navigation {
+  display:flex;
+  justify-content: space-between;
+}
+.slider-pagination {
+  display: flex;
+}
+.button button-more-info{ /*не пойму почему на элемент не влияет ширина и высота*/
+  width:220px;
+  height:40px;
+}
 .button {
   font-family: "Raleway", sans-serif ;
   font-size: 18px;
@@ -85,12 +164,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-.button-current {
-  font-family: "Raleway", sans-serif ;
-  color: #ffE17f;
-  background-color:#000000;
-}
-
 .specifications-item {
   font-size: 16px;
   font-weight: 400;
@@ -99,16 +172,24 @@ body {
   font-size: 36px;
   font-weight: 400;
 }
-/*убирает маркеры у списков*/
-.categories-list, /*селекторы через запятую, вероятно, так лучше не делать, надо уточнить*/
-.navigation-user,
-.navigation-list,
-.contacts-shedule,
-.footer-social-list,
-.breadcrumbs,
-.filter-list,
-.pagination {
-  list-style-type: none
+.specifications-list {
+  display: flex;
+}
+
+/*section categories*/
+
+.categories {
+  width:1440px;
+  margin: 0 auto;
+}
+
+.categories-list { /*Не пойму как внутри карточки от иконки сделать отступ до span*/
+ display:flex;
+ justify-content: space-between;
+ width: 1160px;
+ margin: 0 auto;
+ padding:0;
+ list-style: none;
 }
 .categories-link {
   font-family: "Raleway", sans-serif ;
@@ -118,17 +199,16 @@ body {
   text-decoration: none;
 }
 
-/*Категории гаджетов*/
 .categories-icons {
   width: 160px;
   height: 160px;
   background-color: #ffE17f;
-}
-.icon-vr {
-  background-image: url("../images/catalog/vr.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+.icon-vr {
+  background-image: url("../images/catalog/vr.svg");
+  }
 .icon-monopod {
   background-image: url("../images/catalog/monopod.svg");
   background-repeat: no-repeat;
@@ -136,42 +216,54 @@ body {
 }
 .icon-action-camera {
   background-image: url("../images/catalog/action-camera.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
+  }
 .icon-fitness-tracker {
   background-image: url("../images/catalog/fitness-tracker.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 .icon-smart-watch {
   background-image: url("../images/catalog/smart-watch.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
+ }
 .icon-drone {
   background-image: url("../images/catalog/drone.svg");
+  }
+
+
+/*services*/
+.services {
+  width:1440px;
+  margin: 0 auto;
+  background-color: #f0f0f0 ;
+  background-image: url("../images/delivery-services.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* Услуги */
+.services-menu {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.services-list {
+  list-style: none;
+  padding: 0;
+
+}
+.button-current {
+  font-family: "Raleway", sans-serif ;
+  color: #ffE17f;
+  background-color:#000000;
+}
 .services-name {
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
 }
-.services {
-  background-color: #f0f0f0 ;
-  background-image: url("../images/delivery-services.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
 
-/* что то не так сделал, надо разобраться */
 .additional-service{
   width: 1160px;
   height: 100px;
+  margin: 0 auto;
   background-color: #f0f0f0;
   background-image: url("../images/delivery-car-services.svg");
   background-repeat: no-repeat;
@@ -186,22 +278,42 @@ body {
   text-decoration: none;
 }
 
-.information-title, /*селекторы через запятую, вероятно, так лучше не делать, надо уточнить*/
-.contacts-title,
-.submit-title {
+.section-title{
   font-family:"Raleway", sans-serif ;
   font-size: 50px;
   line-height:50px;
   color: #000000;
   }
 
-.delivery-item {
-  color:#ffE17f
+
+  /*section .information*/
+
+.information {
+  display: flex;
+  width: 1440px;
+  justify-content: space-between;
+  margin: 0 auto;
 }
-.delivery-item span {
+.delivery-list{
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+.delivery-item {
   font-weight: 700;
   line-height: 20px;
   color:#000000;
+  margin-bottom: 19px;
+}
+.delivery-item::before {
+  content:"";
+  display:inline-block;
+  width:8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color:#FFC700;
+  vertical-align: middle;
+  margin-right: 26px;
 }
 .contacts-subtitle {
   font-family: "Rubik", sans-serif ;
@@ -217,9 +329,25 @@ body {
 .contacts-phone {
   color:#000000;
 }
+
+/*section .submit*/
+
 .submit {
+  width: 1440px;
+  margin: 0 auto;
   background-color: #f0f0f0;
 }
+.submit-info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.submit-form-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .submit-button {
   font-family: "Raleway", sans-serif ;
   line-height: 21px;
@@ -227,10 +355,32 @@ body {
   color: #000000;
   text-transform: uppercase;
 }
+
+
+/*footer*/
+
 .page-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  margin:0 auto;
   background-color: #444444;
   color: #ffffff;
 }
+.navigation-list{
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  list-style: none;
+
+}
+.footer-social-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
 .footer-address-street {
   font-style: normal;
 }
@@ -244,10 +394,7 @@ body {
 .htmlacademy-link {
   color: #ffE17f;
 }
-/*для каталога*/
-.navigation-user-link .entered {
-/*хотел поменять цвет "Выйти" но в макете показывает что он черный , хотя виден как серый, не понял*/
-}
+
 .inner-header-title {
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
@@ -311,4 +458,17 @@ body {
 }
 .pagination {
   background-color: #EBEBEB;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
