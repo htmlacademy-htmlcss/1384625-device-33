@@ -85,6 +85,8 @@ body {
   padding:0;
 }
 .navigation-user-link {
+  display: block;
+  padding: 10px;
   line-height: 30px;
   font-weight: 400;
   color: #000000;
@@ -113,12 +115,15 @@ body {
   width: 471px;
   height: 21px;
   display: flex;
+  flex-wrap:wrap;
   justify-content: space-between;
   margin:0;
   padding:0;
   list-style: none;
 }
 .navigation-list-link {
+  display: block;
+  /* padding: 10px; на макете нет вроде паддингов ,но по правилам нужно увеличить прощадь для нажатия */
   font-family: "Raleway", sans-serif ;
   line-height: 21px;
   font-weight: 800;
@@ -127,6 +132,10 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+.navigation-list-item:not(:last-child) {
+  margin-right: 47px;
+}
+
 
 /*main*/
 .main-container {
@@ -137,6 +146,8 @@ body {
 }
 /*section showcase*/
 .showcase-title{
+  margin-top: 0;
+  margin-bottom: 29px;
   font-family: "Raleway", sans-serif ;
   font-size: 50px;
   line-height: 50px;
@@ -152,10 +163,12 @@ body {
 .showcase-navigation {
   display:flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 .slider-pagination {
   display: flex;
 }
+
 
 .button {
   font-family: "Raleway", sans-serif ;
