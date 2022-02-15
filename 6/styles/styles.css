@@ -1,0 +1,553 @@
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+
+}
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+
+}
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
+  font-display: swap;
+
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+
+}
+html {
+  height:100%;
+}
+body {
+  margin:0;
+  display:flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "Rubik", sans-serif ;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  background: #ffffff ;
+}
+.page-container {
+  width: 1440px;
+  margin:auto;
+}
+
+/*обертка Header*/
+.page-header-container{
+  position: relative;
+  width: 1160px;
+  height: 300px;
+  margin:0 auto;
+  padding-top:43px;
+  margin-top:40px;
+  background: #ffE17f;
+}
+.logo-header {
+  position: absolute;
+  top:-22px;
+  left:60px;
+
+
+  }
+
+.page-header-row {
+  display:flex;
+  justify-content: space-between;
+  width: 1040px;
+  margin:0 auto;
+  margin-bottom: 30px;
+
+}
+.navigation-user {
+  display:flex;
+  justify-content: space-between;
+  width: 240px;
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.navigation-user-link {
+  display: block;
+  padding: 10px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+}
+.search-form-field { /*! как задать цвет "текст поиска" и убрать пробел между вводом и кнопкой*/
+  width: 359px;
+  height: 40px;
+  background-color: #ffE17f;
+  border: 2px solid #000000;
+}
+.search-form-button {
+  width: 160px;
+  height: 40px;
+  background-color: #ffE17f;
+  border: 2px solid #000000;
+}
+
+.navigation-list {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.navigation-page-link {
+  width: 471px;
+  height: 21px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.navigation-list-link {
+  display: block;
+  /* padding: 10px; на макете нет вроде паддингов ,но по правилам нужно увеличить прощадь для нажатия */
+  font-family: "Raleway", sans-serif ;
+  line-height: 21px;
+  font-weight: 800;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navigation-list-item:not(:last-child) {
+  margin-right: 47px;
+}
+
+
+/*main*/
+.main-container {
+  flex-grow:1;
+}
+.main-index {
+  background-color: #ffffff;
+}
+/*section showcase*/
+.showcase-title{
+  margin-top: 0;
+  margin-bottom: 29px;
+  font-family: "Raleway", sans-serif ;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  color: #000000;
+}
+.showcase {
+  display: flex;
+  width:1160px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+.showcase-navigation {
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.slider-pagination {
+  display: flex;
+}
+
+
+.button {
+  font-family: "Raleway", sans-serif ;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  color: #000000;
+  background-color:#ffE17f;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.button-more-info {
+  display: block;
+  width:210px;
+  height:20px;
+}
+
+.specifications-item {
+  font-size: 16px;
+  font-weight: 400;
+}
+.specifications-value {
+  font-size: 36px;
+  font-weight: 400;
+}
+.specifications-list {
+  display: flex;
+}
+
+/*section categories*/
+
+.categories {
+  width:1440px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.categories-list {
+ display:flex;
+ justify-content: space-between;
+ width: 1160px;
+ margin: 0 auto;
+ padding:0;
+ list-style: none;
+}
+.categories-link {
+  font-family: "Raleway", sans-serif ;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+  text-decoration: none;
+}
+
+.categories-icons {
+  width: 160px;
+  height: 160px;
+  background-color: #ffE17f;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin-bottom: 33px;
+}
+.icon-vr {
+  background-image: url("../images/catalog/vr.svg");
+  }
+.icon-monopod {
+  background-image: url("../images/catalog/monopod.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 43px;
+}
+.icon-action-camera {
+  background-image: url("../images/catalog/action-camera.svg");
+  }
+.icon-fitness-tracker {
+  background-image: url("../images/catalog/fitness-tracker.svg");
+}
+.icon-smart-watch {
+  background-image: url("../images/catalog/smart-watch.svg");
+ }
+.icon-drone {
+  background-image: url("../images/catalog/drone.svg");
+  }
+
+
+/*services*/
+.services {
+  width:1440px;
+  margin: 0 auto;
+  background-color: #f0f0f0 ;
+  background-image: url("../images/delivery-services.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.services-menu {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.services-list {
+  list-style: none;
+  padding: 0;
+
+}
+.button-current {
+  font-family: "Raleway", sans-serif ;
+  color: #ffE17f;
+  background-color:#000000;
+}
+.services-name {
+  font-family: "Raleway", sans-serif ;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+}
+
+.additional-service{
+  width: 1160px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  background-image: url("../images/delivery-car-services.svg");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.button-additional-service {
+  font-family: "Raleway", sans-serif ;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 800;
+  color: #000000;
+  text-decoration: none;
+}
+
+.section-title{
+  font-family:"Raleway", sans-serif ;
+  font-size: 50px;
+  line-height:50px;
+  color: #000000;
+  }
+
+
+  /*section .information*/
+
+.information {
+  display: flex;
+  width: 1440px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.delivery-list{
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+.delivery-item {
+  font-weight: 700;
+  line-height: 20px;
+  color:#000000;
+  margin-bottom: 19px;
+}
+.delivery-item::before {
+  content:"";
+  display:inline-block;
+  width:8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color:#FFC700;
+  vertical-align: middle;
+  margin-right: 26px;
+}
+.contacts-subtitle {
+  font-family: "Rubik", sans-serif ;
+  font-size:24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.contacts-address {
+  font-style:normal;
+}
+.contacts-phone {
+  color:#000000;
+}
+
+/*section .submit*/
+
+.submit {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+}
+.submit-info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.submit-form-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.submit-button {
+  font-family: "Raleway", sans-serif ;
+  line-height: 21px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+
+/*footer*/
+
+.page-footer {
+  width: 1440px;
+  margin:0 auto;
+  background-color: #444444;
+  color: #ffffff;
+}
+.footer-block{
+  display: flex;
+  justify-content: space-between;
+  margin:0 auto;
+  padding:62px 140px;
+}
+.navigation-list{
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  list-style: none;
+
+}
+.footer-social-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 35px;}
+.footer-address{
+  width:239px;
+  margin-right: 112px;
+}
+.footer-address-street {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+.page-footer .navigation-list-link {
+  color:#ffffff;
+}
+.footer-contacts-phone {
+  color: #ffffff;
+  font-style: normal;
+}
+.htmlacademy-link {
+  color: #ffE17f;
+}
+
+/*catalog.html*/
+.inner-container {
+margin:0 auto;
+width:1440px;
+
+}
+.inner-header {
+  display: flex;
+  flex-direction: column;
+  width: 1079px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+}
+.breadcrumbs-item {
+  margin-right: 36px;
+}
+.breadcrumbs:last-child {
+  margin-right: 0px;
+}
+
+.inner-header-title {
+  font-family: "Raleway", sans-serif ;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  color: #000000;
+}
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 19px;
+  color:#000000;
+  text-decoration: none;
+}
+.inner-catalog {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+}
+.catalog-filter {
+  width: 320px;
+  margin-left: 140px;
+}
+.products{
+  width:840px;
+}
+.filter-title,
+.select-title {
+  font-family: "Raleway", sans-serif ;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+}
+.filter-form-title {
+  line-height: 20px;
+  font-weight: 700;
+}
+.product-cards {
+  background-color: #ffffff;
+}
+.product-card-link{
+  text-decoration: none;
+}
+.product-card span {
+  line-height: 21px;
+}
+.product-card-title {
+  font-family: "Rubik", sans-serif ;
+  font-weight: 700;
+  line-height: 20px;
+  color: #000000;
+}
+.pagination-more { /*не понимаю почему ссылка не центруется*/
+  display: block;
+  width: 760px;
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif ;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.pagination-link {
+  font-size: 16px;
+  line-height: 20px;
+  color:#444444;
+}
+.pagination-back,
+.pagination-forward {
+  font-family: "Raleway", sans-serif ;
+  line-height: 21px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.pagination {
+  background-color: #EBEBEB;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
