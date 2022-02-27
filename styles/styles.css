@@ -45,15 +45,18 @@ body {
 
 /*кнопки*/
 .button {
-    font-family: "Raleway";
+  display: inline-block;
+  font-family: "Raleway";
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #ffe17f; /*как сделать фон кнопок как на макете*/
+  background-color: #ffe17f;
   text-decoration: none;
   text-transform: uppercase;
   padding:10px 5px;
+  cursor: pointer;
+  border: none;
 
 }
 
@@ -64,6 +67,9 @@ body {
   top:-22px;
   left:60px;
 }
+.logo-header:hover {
+/*не знаю какие свойства написать*/
+}
 .page-header {
   color: #000000;
   background-color: #ffe17f;
@@ -73,12 +79,24 @@ body {
   padding-top:43px;
   position: relative;
 }
+.menu-login {
+  list-style: none;
+  margin:0;
+  padding: 0;
+  display: flex;
+}
+.menu-login-link {
+  color:#000000;
+  text-decoration: none;
+  padding:5px;
+  padding-left: 27px;
+}
+
 .user-menu {
   list-style: none;
   margin:0;
   padding: 0;
   display: flex;
-
 }
 
 .user-menu-link {
@@ -102,6 +120,7 @@ body {
   text-transform: uppercase;
   padding: 5px 10px;
 }
+
 .user-menu-container {
   display: flex;
   justify-content: space-between;
@@ -219,15 +238,25 @@ body {
   width:1160px;
   margin: 0 auto;
   display: flex;
+  justify-content: baseline;
+  padding: 72px;
+  position: relative;
 }
 .services-list {
+  width: 280px;
   list-style: none;
   margin:0;
   padding:0;
+  text-align: left;
+
 }
 .services-item:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
+.services-name {
+  margin: 0;
+}
+
 .button-current {
   color:#ffe17f;
   background-color: #000000;
@@ -239,26 +268,67 @@ body {
   font-size: 50px;
   line-height: 50px;
   color:#000000;
+
+  margin-bottom: 34px;
 }
+.service-description {
+  width: 452px;
+  margin-right: 106px;
+}
+
+.services-text {
+  margin: 0;
+}
+.services-icon-delivery {
+  background-image: url("../images/delivery-services.svg");
+  width: 136px;
+  background-repeat: no-repeat;
+}
+
+.services-menu::after{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left:280px;
+  width: 7px;
+  background-color: #000000;
+}
+
 
 /*additional-service*/
 .additional-service-container {
   width:1160px;
   margin: 0 auto;
   background-color: #F0F0F0;
+
 }
 .additional-service-button {
+  display: block;
   font-family: "Raleway";
   font-weight: 800;
   font-size: 20px;
   line-height: 23px;
   color:#000000;
   text-decoration: none;
-  }
+  padding: 40px 125px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+
+}
+.additional-service-button::after{ /*не пойму почему не добавляется */
+  content:'';
+  position: absolute;
+  width: 125px;
+  background-color: #ffe17f;
+  left:0;
+}
 
 /*information*/
 .information-container{
   margin: 0 auto;
+  margin-bottom: 70px;
   width: 1160px;
   display: flex;
   justify-content: space-between;
@@ -328,7 +398,12 @@ body {
   text-transform: uppercase;
   padding: 18px 39px;
 }
-
+.submit-free::before { /*не понял почему не добавляется эелемент*/
+  content:"";
+  display:inline-block;
+  background-image: url("../images/icons/checked.svg");
+  background-size: 14px 14px;
+}
 
 
 
@@ -367,10 +442,12 @@ body {
 }
 .footer-navigation-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   justify-content: space-between;
   width: 444px;
+  list-style: none;
 }
 .footer-address-street {
   font-style: normal;
@@ -383,15 +460,20 @@ body {
   padding: 0;
   display: flex;
 }
+.footer-social-button {
+  display: block;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+}
+.footer-social-facebook { /*не знаю почему не добавляется иконка..*/
+  background-image: url("../images/icons/facebook-icon.svg");
+}
+
 .footer-contacts-phone {
   color:#ffffff;
   font-size: 16px;
   font-style:normal;
-}
-.footer-decor {
-  background-color: #FFC700;
-  width: 80px ;
-  height: 7px ;
 }
 
 
